@@ -1,0 +1,28 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+/* Add more styles as needed */
+
+/* Example styles for project section */
+#projects {
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.project {
+    display: flex;
+    margin-bottom: 20px;
+}
+.project img {
+    width: 500px;
+    height: auto;
+    margin-right: 20px;
+}
+.project-description {
+    flex: 1;
+}
