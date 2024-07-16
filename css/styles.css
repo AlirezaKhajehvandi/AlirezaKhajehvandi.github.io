@@ -47,6 +47,7 @@ header {
   
   /* Style the navigation menu */
   nav {
+    display: flex;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 20%;
@@ -63,6 +64,7 @@ header {
   
   /* Style the content */
   article {
+    display: flex;
     -webkit-flex: 3;
     -ms-flex: 3;
     flex: 3;
