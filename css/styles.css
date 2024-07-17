@@ -1,130 +1,143 @@
-/* Basic reset */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
+* {
+  box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* Style the header */
-/* header {
-    background-color: #666;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-  } */
-/* header {
-    display: flex;
-    background-color: #4989ff;
-    text-align: center;
-    align-items: center;
-    padding: 30px;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
-
 header {
-    text-align: center;
-    background-color: #4989ff;
-    padding: 30px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-  /* Container for flexboxes */
-  section {
-    display: -webkit-flex;
-    display: flex;
-  }
-  
-  /* Style the navigation menu */
-  nav {
-    display: flex;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 20%;
-    width: 100%;
-    background: #ccc;
-    padding: 10px;
-  }
-  
-  /* Style the list inside the menu */
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  /* Style the content */
-  article {
-    display: flex;
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    background-color: #f1f1f1;
-    padding: 10px;
-  }
-  
-  /* Style the footer */
-  footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-  
-  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-  @media (max-width: 600px) {
-    section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-  }
-
-
-
-/* Example styles for project section */
-
-.project {
-    display: flex;
-    justify-content: left;
-    align-items: right;
-    margin-bottom: 20px;
-}
-.project img {
-    /* flex: 0; */
-    display: flex;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    margin-right: auto; 
-    margin-left: auto;
-}
-.project-description {
-    flex: 1;
-}
-
-.text_center_custom {
-    flex: 1;
-    text-align: center;
-    align-items: center;
-}
-
-
-.project_title_style {
-  flex: 1;
+  background-image: url("../images/AKH_Banner_Cropped.png");
+  background-repeat: no-repeat;
+  background-color: #ffc507;
+  background-position-y: 50px;
+  background-position-x: center;
+  padding: 30px;
   text-align: center;
-  align-items: center;
-  font-size: 30px;
+  font-size: 50px;
+  color: white;
 }
-.paragraph_style {
-  font-size: 25px;
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Create two equal columns that floats next to each other */
+.column_left {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+  text-align: right;
+}
+.column_right {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+  text-align: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.custom_image {
+  width: 70%;
+  height: 50%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.custom_image_akh {
+  width: 20%;
+  height: 10%;
+  /* transform: translate(-50%, -50%); */
+}
+.custom_text {
+  text-align: center;
+  padding: 10px;
+}
+.custom_paragraph {
+  text-align: left;
+  padding-top: 0px;
+  padding-left: 10px;
+  font-size: 1.8vw;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.custom_title {
+  text-align: center;
+  font-size: 2vw;
+}
+
+.custom_name {
+  text-align: center;
+  color: #1d2432;
+  font-size: 5vw;
+}
+
+.custom_field {
+  text-align: center;
+  color: #323234;
+  font-size: 3vw;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column_left,
+  .column_right,
+  .custom_image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom_paragraph {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom_title {
+    font-size: 5vw;
+  }
 }
